@@ -1,25 +1,21 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { Divider, Grid } from "@mui/material";
+import { GoogleCalendar } from "./GoogleCalendar/GoogleCalendar";
+import { TickTick } from "./TickTick/components/TickTick";
+import { TickTickTokenProvider } from "./TickTick/context/TickTickTokenContext";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <TickTickTokenProvider>
+      <Grid container spacing={2}>
+        <Grid item xs={3}>
+          <TickTick />
+        </Grid>
+        <Divider orientation="vertical" flexItem />
+        <Grid item xs>
+          <GoogleCalendar />
+        </Grid>
+      </Grid>
+    </TickTickTokenProvider>
   );
 }
 
