@@ -5,6 +5,9 @@ Application created for managing your daily tasks using integration with TickTic
 
 The plan is to create an application that will allow you to add TickTick tasks to Google Calendar with drag & drop.
 
+<img width="1033" alt="image" src="https://github.com/mwrz/planit/assets/18627402/d12084da-fffe-46bf-b29c-be46f2fcedd2">
+
+
 ## Run the application locally
 
 - To run it locally, you need to create a TickTick account and create a new project on `https://developer.ticktick.com/manage`.
