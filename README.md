@@ -1,50 +1,33 @@
-# Getting Started with Create React App
+# Planit - plan your day effectively
+![React](https://img.shields.io/badge/react-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB) ![TypeScript](https://img.shields.io/badge/typescript-%23007ACC.svg?style=for-the-badge&logo=typescript&logoColor=white) ![Styled Components](https://img.shields.io/badge/styled--components-DB7093?style=for-the-badge&logo=styled-components&logoColor=white) ![MUI](https://img.shields.io/badge/MUI-%230081CB.svg?style=for-the-badge&logo=mui&logoColor=white)
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Application created for managing your daily tasks using integration with TickTick and Google Calendar.
 
-## Available Scripts
+The plan is to create an application that will allow you to add TickTick tasks to Google Calendar with drag & drop.
 
-In the project directory, you can run:
+## Run the application locally
 
-### `npm start`
+- To run it locally, you need to create a TickTick account and create a new project on `https://developer.ticktick.com/manage`.
+- The `OAuth redirect URL` should be `http://localhost:3000`.
+- Then copy your `client ID` and `client secret` to `.env` file of this project and pass them as `REACT_APP_TICKTICK_CLIENT_ID` and `REACT_APP_TICKTICK_AUTH_TOKEN`.
+- Storing the secret in the `.env file` is _not_ a good option for security reasons. For now it's a temporary solution for local development - later a server will be added to store them.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+⚠️ Currently the application needs to be run in a browser with CORS turned off because of lack of control over TickTick API response headers. This is another reason why there is a need for adding a server.
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+To run the application just type `npm start` in a terminal and open `http://localhost:3000` to view it in a browser.
 
-### `npm test`
+## Roadmap
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Currently the application only integrates with the TickTick API.
 
-### `npm run build`
+Next step will be to add integration with Google Calendar. List of planned tasks can be found in the [issues](https://github.com/mwrz/planit/issues).
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Libraries and APIs used:
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+- [MUI](https://mui.com/material-ui/)
+- [styled-components](https://styled-components.com/)
+- [TickTick API](https://developer.ticktick.com/docs#/openapi)
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+<br>
 
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-Stworzyc plik .env z pustymi zmiennymi
-napisac w readme, ze zeby uruchomic lokalnie trzeba dodac tam credentiale
-i napisac, ze w przypadku depolya nie mozna tak trzymac danych, trzeba zrobic jakis backend do tego
+_This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app)._
