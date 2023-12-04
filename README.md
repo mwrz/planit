@@ -20,7 +20,7 @@ To run the application just type `npm start` in a terminal and open `http://loca
 
 Currently the application only integrates with the TickTick API.
 
-Next step will be to add integration with Google Calendar. List of planned tasks can be found in the [issues](https://github.com/mwrz/planit/issues).
+Next step will be to add integration with Google Calendar. List of planned tasks can be found in the [issues](https://github.com/mwrz/planit/issues) and [project](https://github.com/users/mwrz/projects/1/views/1).
 
 ## Libraries and APIs used:
 
